@@ -1,3 +1,3 @@
-# WordPress branding for Rebel Interactive Group
+# WordPress branding for Roots
 Basic theme branding.
 
