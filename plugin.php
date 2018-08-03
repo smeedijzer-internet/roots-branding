@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Roots.io Branding
+Plugin Name: Roots Branding
 Plugin URI: https://roots.io
-Description: Branding for Roots.io WordPress sites.
+Description: Branding for Roots WordPress sites.
 Version: 1.0
 Author: Michael W. Delaney
 Author URI:
