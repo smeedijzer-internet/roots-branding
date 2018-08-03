@@ -1,0 +1,19 @@
+{
+  "name": "roots/roots-branding",
+  "description": "Branding for Roots.io WordPress sites.",
+  "keywords": ["wordpress", "plugin", "branding"],
+  "homepage": "https://github.com/roots/roots-branding",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michael W. Delaney"
+    }
+  ],
+  "type": "wordpress-muplugin",
+  "require": {
+    "php": ">=5.3.2"
+  },
+  "autoload": {
+    "psr-4": { "Roots\\Branding\\": "src/" }
+  }
+}
