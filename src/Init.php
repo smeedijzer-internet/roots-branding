@@ -70,7 +70,7 @@ class Init
         $wp_admin_bar->add_node([
           'id' => $menu_id,
           'title' =>
-          '<span class="ab-icon">' . file_get_contents(ROOTS_BRANDING_PLUGIN_URL . "assets/images/logo-icon.svg") . '</span>',
+          '<span class="ab-icon">' . file_get_contents(ROOTS_BRANDING_PLUGIN_DIR . "assets/images/logo-icon.svg") . '</span>',
           'href' => '/'
           ]);
         $wp_admin_bar->add_node([
