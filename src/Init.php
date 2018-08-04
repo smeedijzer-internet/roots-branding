@@ -70,7 +70,7 @@ class Init
         $wp_admin_bar->add_node([
           'id' => $menu_id,
           'title' =>
-          '<span class="ab-icon"></span>',
+          '<span class="ab-icon">' . file_get_contents(ROOTS_BRANDING_PLUGIN_DIR . "assets/images/logo-icon.svg") . '</span>',
           'href' => '/'
           ]);
         $wp_admin_bar->add_node([
@@ -96,8 +96,8 @@ class Init
         margin-right: 0 !important;
         padding-top: 8px !important;
       }
-      #wpadminbar #wp-admin-bar-my-logo > .ab-item .ab-icon:before {
-        content: url( <?=(ROOTS_BRANDING_PLUGIN_URL . 'assets/images/logo-icon-white.svg') ?> )
+      #wpadminbar #wp-admin-bar-my-logo > .ab-item .ab-icon svg * {
+        fill: currentColor;
       }
     </style>
   <?php
