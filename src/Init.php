@@ -94,7 +94,7 @@ class Init
         height: 20px;
         width: 20px;
         margin-right: 0 !important;
-        padding-top: 8px !important;
+        padding-top: 7px !important;
       }
       #wpadminbar #wp-admin-bar-my-logo > .ab-item .ab-icon svg * {
         fill: currentColor;
