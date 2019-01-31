@@ -75,7 +75,7 @@ class Init
         wp_admin_css_color(
             'msk-colors',
             __('RusseBlanc'),
-            App\asset_path('styles/wp-admin.css'),
+            RUSSEBLANC_BRANDING_PLUGIN_URL . 'assets/styles/admin-style.css',
             array('rgb(213, 43, 30)', 'rgb(31, 31, 31)', 'rgb(213, 43, 30)', 'rgb(255, 255, 255)'),
             array('rgb(213, 43, 30)', 'rgb(31, 31, 31)', 'rgb(213, 43, 30)', 'rgb(255, 255, 255)')
         );
