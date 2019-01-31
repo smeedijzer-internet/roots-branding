@@ -14,8 +14,14 @@ class Init
         add_action('wp_before_admin_bar_render', [$this, 'menu_custom_logo']);
         add_filter('login_headerurl', [$this, 'login_logo_url']);
         add_filter('login_headertitle', [$this, 'login_logo_title']);
+        add_action('phpmailer_init', [$this, 'disable_xmailer']);
+        add_filter('jpeg_quality', [$this, 'my_custom_jpeg_quality']);
+        remove_action('wp_head', 'wp_generator');
+        add_filter( 'style_loader_src', [$this, 'hide_wordpress_version_in_script'], 10, 2 );
+        add_filter( 'script_loader_src', [$this, 'hide_wordpress_version_in_script'], 10, 2 );
+        add_action('admin_init', [$this, 'msk_custom_admin_color_palette']);
+        add_action('user_register', [$this, 'msk_default_admin_color_palette']);
 
-        // IF SOIL
         /**
          * Enable features from Soil when plugin is activated
          * @link https://roots.io/plugins/soil/
@@ -27,54 +33,6 @@ class Init
         add_theme_support('soil-nav-walker');
         add_theme_support('soil-nice-search');
         add_theme_support('soil-relative-urls');
-
-        add_action('phpmailer_init', [$this, 'disable_xmailer']);
-        function disable_xmailer($phpmailer) {
-            $phpmailer->XMailer = ' ';
-        }
-
-        // THUMBNAIL SIZE & QUALITY
-        function my_custom_jpeg_quality()
-        {
-            return 100;
-        }
-        add_filter('jpeg_quality', [$this, 'my_custom_jpeg_quality']);
-
-        // Hide WordPress Version Info
-        remove_action('wp_head', [$this, 'wp_generator']);
-
-        // Remove WordPress Version Number In URL Parameters From JS/CSS
-        function hide_wordpress_version_in_script($src, $handle)
-        {
-            $src = remove_query_arg('ver', $src);
-            return $src;
-        }
-        add_filter( 'style_loader_src', [$this, 'hide_wordpress_version_in_script'], 10, 2 );
-        add_filter( 'script_loader_src', [$this, 'hide_wordpress_version_in_script'], 10, 2 );
-
-        /* ADMIN CONFIG */
-        // Custom admin login header logo
-        function msk_custom_admin_color_palette()
-        {
-            wp_admin_css_color(
-                'msk-colors',
-                __('RusseBlanc'),
-                App\asset_path('styles/wp-admin.css'),
-                array('rgb(213, 43, 30)', 'rgb(31, 31, 31)', 'rgb(213, 43, 30)', 'rgb(255, 255, 255)'),
-                array('rgb(213, 43, 30)', 'rgb(31, 31, 31)', 'rgb(213, 43, 30)', 'rgb(255, 255, 255)')
-            );
-        }
-        add_action('admin_init', [$this, 'msk_custom_admin_color_palette']);
-
-        function msk_default_admin_color_palette($user_id) {
-            $args = array(
-            'ID' => $user_id,
-            'admin_color' => 'msk-colors'
-            );
-
-            wp_update_user($args);
-        }
-        add_action('user_register', [$this, 'msk_default_admin_color_palette']);
     }
 
     /**
@@ -85,6 +43,55 @@ class Init
         $wp_admin_bar->remove_node('wp-logo');
     }
 
+    /**
+    * Remove WordPress Version Number In URL Parameters From JS/CSS
+    */
+    public function hide_wordpress_version_in_script($src, $handle)
+    {
+        $src = remove_query_arg('ver', $src);
+        return $src;
+    }
+
+    /**
+    * Thumbnail size & quality
+    */
+    public function my_custom_jpeg_quality()
+    {
+        return 100;
+    }
+
+    /**
+    * Remove XMailer ads from mail
+    */
+    public function disable_xmailer($phpmailer) {
+        $phpmailer->XMailer = ' ';
+    }
+
+    /**
+    * Custom admin color palette
+    */
+    public function msk_custom_admin_color_palette()
+    {
+        wp_admin_css_color(
+            'msk-colors',
+            __('RusseBlanc'),
+            App\asset_path('styles/wp-admin.css'),
+            array('rgb(213, 43, 30)', 'rgb(31, 31, 31)', 'rgb(213, 43, 30)', 'rgb(255, 255, 255)'),
+            array('rgb(213, 43, 30)', 'rgb(31, 31, 31)', 'rgb(213, 43, 30)', 'rgb(255, 255, 255)')
+        );
+    }
+
+    /**
+    * Custom default admin color palette
+    */
+    public function msk_default_admin_color_palette($user_id) {
+        $args = array(
+            'ID' => $user_id,
+            'admin_color' => 'msk-colors'
+        );
+
+        wp_update_user($args);
+    }
     /**
     * Replace login screen logo
     */
