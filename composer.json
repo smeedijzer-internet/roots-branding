@@ -1,12 +1,12 @@
 {
-  "name": "roots/roots-branding",
-  "description": "Branding for Roots WordPress sites.",
+  "name": "russe-blanc/rusesblanc-branding",
+  "description": "Branding for RusseBlanc WordPress sites.  (fork github.com/roots/roots-branding)",
   "keywords": ["wordpress", "plugin", "branding"],
-  "homepage": "https://github.com/roots/roots-branding",
+  "homepage": "https://www.russeblanc.com",
   "license": "MIT",
   "authors": [
     {
-      "name": "Michael W. Delaney"
+      "name": "Mickaël OUILLON"
     }
   ],
   "type": "wordpress-muplugin",
@@ -14,6 +14,6 @@
     "php": ">=5.3.2"
   },
   "autoload": {
-    "psr-4": { "Roots\\Branding\\": "src/" }
+    "psr-4": { "RusseBlanc\\Branding\\": "src/" }
   }
 }

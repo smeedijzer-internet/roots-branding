@@ -1,6 +1,6 @@
 <?php
 
-namespace Russeblanc\Branding;
+namespace RusseBlanc\Branding;
 
 // Set up plugin class
 class Init

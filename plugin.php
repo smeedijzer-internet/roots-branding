@@ -10,7 +10,7 @@ Author URI: https://www.russeblanc.com
 License: MIT
 */
 
-namespace Russeblanc\Branding;
+namespace RusseBlanc\Branding;
 
 /**
  * Set up autoloader
