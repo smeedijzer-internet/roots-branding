@@ -1,6 +1,6 @@
 <?php
 
-namespace Roots\Branding;
+namespace Russeblanc\Branding;
 
 // Set up plugin class
 class Init
@@ -93,7 +93,7 @@ class Init
         ?>
     <style type="text/css">
       body.login div#login h1 a {
-      background-image: url( <?=(ROOTS_BRANDING_PLUGIN_URL . 'assets/images/logo-icon.svg')?> );
+      background-image: url( <?=(RUSSEBLANC_BRANDING_PLUGIN_URL . 'assets/images/logo-icon.svg')?> );
       background-repeat: no-repeat;
       background-size: auto;
       width: 300px;
@@ -127,7 +127,7 @@ class Init
         $wp_admin_bar->add_node([
           'id' => $menu_id,
           'title' =>
-          '<span class="ab-icon">' . file_get_contents(ROOTS_BRANDING_PLUGIN_DIR . "assets/images/logo-icon.svg") . '</span>',
+          '<span class="ab-icon">' . file_get_contents(RUSSEBLANC_BRANDING_PLUGIN_DIR . "assets/images/logo-icon.svg") . '</span>',
           'href' => '/'
           ]);
         $wp_admin_bar->add_node([
