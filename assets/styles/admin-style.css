@@ -94,6 +94,17 @@
   box-shadow: none;
 }
 
+#adminmenu::before {
+    content: ' ';
+    display: block;
+    margin: 1em auto;
+    width: 90px;
+    height: 85px;
+    background-image: url(../images/logo-icon-white.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 #adminmenu,
 #adminmenuback,
 #adminmenuwrap,
@@ -108,15 +119,6 @@ body:not(.sticky-menu) #adminmenuwrap #adminmenu {
   overflow-y: auto;
   margin: 0;
   margin-top: 85px;
-}
-
-.sticky-menu #adminmenuwrap #adminmenu {
-  height: calc(100vh - 85px);
-  margin: 0;
-  position: absolute;
-  top: 85px;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .sticky-menu #adminmenuwrap #adminmenu #collapse-menu {
@@ -292,7 +294,7 @@ body:not(.sticky-menu) #adminmenuwrap #adminmenu {
 #adminmenu li.menu-top:hover,
 #adminmenu li > a.menu-top:focus {
   color: rgb(213, 43, 30) !important;
-  background-color: rgb(255, 255, 255) !important;
+  background-color: rgb(218, 68, 46) !important;
 }
 
 #adminmenu li:hover div.wp-menu-image::before {
@@ -319,8 +321,8 @@ ul#adminmenu > li.current > a.current::after {
 
 #adminmenu .awaiting-mod,
 #adminmenu .update-plugins {
-  background-color: rgb(213, 43, 30);
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  color: #d8290f;
 }
 
 #adminmenu .wp-menu-image img {
