@@ -298,7 +298,7 @@ body:not(.sticky-menu) #adminmenuwrap #adminmenu {
 }
 
 #adminmenu li:hover div.wp-menu-image::before {
-  color: #fff !important;
+  color: #fff;
 }
 
 #adminmenu .wp-has-current-submenu .wp-submenu,
@@ -575,4 +575,8 @@ body.wp-admin .wp-core-ui .button.button-primary.button-hero {
 
 .tsf-flex-nav-tab .tsf-flex-nav-tab-radio:checked + .tsf-flex-nav-tab-label {
   box-shadow: 0 -2px 0 0 rgb(213, 43, 30) inset;
+}
+
+.wp-core-ui .button.button-primary.button-hero {
+    box-shadow: 0 2px 0 rgb(213, 43, 30);
 }

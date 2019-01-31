@@ -122,7 +122,7 @@ class Init
     // Replace login logo title
     public function login_logo_title()
     {
-        return 'Propulsé avec ❤️ par <a href="https://www.russeblanc.com" style="color:#d52b1e" target="_blank">RUSSE<strong>BLANC</strong></a>';
+        return 'Propulsé avec ❤️ par <a href="https://www.russeblanc.com" style="text-decoration: none;color:#d52b1e" target="_blank">RUSSE<strong>BLANC</strong></a>';
     }
 
 
@@ -172,6 +172,6 @@ class Init
     */
     public function admin_footer($content)
     {
-        return 'Imaginé & développé avec ❤️ par <a href="https://www.russeblanc.com" style="color:#d52b1e" target="_blank">RUSSE<strong>BLANC</strong></a>';
+        return 'Imaginé & développé avec ❤️ par <a href="https://www.russeblanc.com" style="text-decoration: none;color:#d52b1e" target="_blank">RUSSE<strong>BLANC</strong></a>';
     }
 }
