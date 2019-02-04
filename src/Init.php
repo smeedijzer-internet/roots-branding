@@ -17,6 +17,7 @@ class Init
         add_action('phpmailer_init', [$this, 'disable_xmailer']);
         add_filter('jpeg_quality', [$this, 'my_custom_jpeg_quality']);
         remove_action('wp_head', 'wp_generator');
+        add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
         add_filter( 'style_loader_src', [$this, 'hide_wordpress_version_in_script'], 10, 2 );
         add_filter( 'script_loader_src', [$this, 'hide_wordpress_version_in_script'], 10, 2 );
         add_action('admin_init', [$this, 'msk_custom_admin_color_palette']);
