@@ -124,23 +124,29 @@ class Init
         background-color: #ffffff;
       }
 
-      input[type=checkbox]:checked:before {
+      body input[type=checkbox]:checked:before {
         color: rgb(213, 43, 30);
       }
 
-      a {
+      body  input[type=checkbox]:focus {
+        border-color: #d52b1e;
+        box-shadow: 0 0 2px rgb(213, 43, 30);
+      }
+
+      body a {
+        color: rgb(213, 43, 30);
+      }
+      
+      body.login #backtoblog a:hover,
+      body.login #nav a:hover,
+      body.login h1 a:hover {
         color: rgb(213, 43, 30);
       }
 
-      .login #backtoblog a:hover,
-      .login #nav a:hover,
-      .login h1 a:hover {
-        color: rgb(213, 43, 30);
-      }
-
-      .wp-core-ui .button-primary {
+      body.login.wp-core-ui .button-primary {
         background: rgb(213, 43, 30);
-        border-color: rgb(213, 43, 30);
+        border-color: #ffffff;
+        text-transform: uppercase;
         box-shadow: 0 1px 0 rgb(213, 43, 30);
         text-shadow: 0 -1px 1px rgb(213, 43, 30);
       }
