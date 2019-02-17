@@ -100,11 +100,57 @@ class Init
     {
         ?>
     <style type="text/css">
+      body.login {
+        background-color: #ffffff;
+      }
+
+      body.login form {
+       background-color: rgb(213, 43, 30);
+       color: #ffffff;
+      }
+
+      body.login label {
+        color: #ffffff;
+      }
+
+      body.login #login {
+        padding: 5% 0 0;
+      }
+
+      .login form .input,
+      .login form input[type=checkbox],
+      .login input[type=text] {
+        color: rgb(213, 43, 30);
+        background-color: #ffffff;
+      }
+
+      input[type=checkbox]:checked:before {
+        color: rgb(213, 43, 30);
+      }
+
+      a {
+        color: rgb(213, 43, 30);
+      }
+
+      .login #backtoblog a:hover,
+      .login #nav a:hover,
+      .login h1 a:hover {
+        color: rgb(213, 43, 30);
+      }
+
+      .wp-core-ui .button-primary {
+        background: rgb(213, 43, 30);
+        border-color: rgb(213, 43, 30);
+        box-shadow: 0 1px 0 rgb(213, 43, 30);
+        text-shadow: 0 -1px 1px rgb(213, 43, 30);
+      }
+
       body.login div#login h1 a {
       background-image: url( <?=(RUSSEBLANC_BRANDING_PLUGIN_URL . 'assets/images/logo-icon.svg')?> );
       background-repeat: no-repeat;
       background-size: auto;
       width: 300px;
+      height: 200px;
     }
     </style>
   <?php
@@ -115,7 +161,7 @@ class Init
      */
     public function login_logo_url($url)
     {
-        return 'https://wwww.russeblanc.com';
+        return 'https://www.russeblanc.com';
     }
 
 
@@ -123,7 +169,7 @@ class Init
     // Replace login logo title
     public function login_logo_title()
     {
-        return 'Propulsé avec ❤️ par <a href="https://www.russeblanc.com" style="text-decoration: none;color:#d52b1e" target="_blank">RUSSE<strong>BLANC</strong></a>';
+        return '';
     }
 
 
@@ -142,7 +188,7 @@ class Init
           'parent' => $menu_id,
           'title' => __('Homepage'),
           'id' => 'RusseBlanc',
-          'href' => 'https://wwww.russeblanc.com',
+          'href' => 'https://www.russeblanc.com',
           'meta' => ['target' => '_blank']
           ]);
     }
