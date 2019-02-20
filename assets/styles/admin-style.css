@@ -497,6 +497,10 @@ textarea:focus {
   border-color: #d6290f !important;
 }
 
+.mainwp_boxout a:hover {
+  color: #d6290f;
+}
+
 .mainwp-upgrade-button:hover {
   background: #fff !important;
   color: #d6290f !important;
@@ -542,6 +546,19 @@ body.wp-admin .components-button.is-primary.is-primary.is-busy[disabled] {
   background-size: 100px 100% !important;
   background-image: linear-gradient(-45deg, rgb(213, 43, 30) 28%, rgb(213, 43, 30) 0, rgb(213, 43, 30) 72%, rgb(213, 43, 30) 0) !important;
   border-color: rgb(213, 43, 30) !important;
+}
+
+ul#gf_form_toolbar_links li a.gf_toolbar_active:hover, ul#gf_form_toolbar_links li a:hover {
+  color: rgb(213, 43, 30);
+}
+
+.mainwp-ui input[type="checkbox"]:checked:before {
+  color: rgb(213, 43, 30);
+}
+
+#mainwp-tabs .nav-tab-active {
+  color: rgb(213, 43, 30);
+  border-top: 1px solid rgb(213, 43, 30)!important;
 }
 
 body.wp-admin .components-button.is-link {
