@@ -561,6 +561,14 @@ ul#gf_form_toolbar_links li a.gf_toolbar_active:hover, ul#gf_form_toolbar_links 
   border-top: 1px solid rgb(213, 43, 30)!important;
 }
 
+.mainwp-checkbox:before {
+  left: 4px;
+}
+
+.mainwp-checkbox:after {
+  right: 4px;
+}
+
 body.wp-admin .components-button.is-link {
   color: rgb(213, 43, 30);
 }
