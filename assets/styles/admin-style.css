@@ -489,7 +489,17 @@ textarea:focus {
 
 #adminmenu #toplevel_page_mainwp_tab a:hover,
 #adminmenu #toplevel_page_mainwp_tab li.hoverli a span {
-  color: rgb(213, 43, 30) !important;
+  color: #fff !important;
+}
+
+.mainwp-upgrade-button {
+  background: #d6290f !important;
+  border-color: #d6290f !important;
+}
+
+.mainwp-upgrade-button:hover {
+  background: #fff !important;
+  color: #d6290f !important;
 }
 
 .js .postbox .handlediv:focus .toggle-indicator::before {
