@@ -502,6 +502,10 @@ body .mainwp-upgrade-button {
   box-shadow: 0 1px 0 #d52b1e !important;
 }
 
+#adminmenu li.wp-has-current-submenu:hover div.wp-menu-image:before {
+  color: #d52b1e;
+}
+
 body .mainwp_boxout a:hover {
   color: #d52b1e;
 }
