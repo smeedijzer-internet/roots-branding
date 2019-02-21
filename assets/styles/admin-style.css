@@ -44,18 +44,22 @@
 
 .wp-core-ui .button.hover,
 .wp-core-ui .button:hover {
-  color: rgb(213, 43, 30);
-  border-color: rgb(213, 43, 30);
-  background: #fff;
-  box-shadow: 0 1px 0 rgb(213, 43, 30);
+  color: rgb(213, 43, 30) !important;
+  border-color: rgb(213, 43, 30) !important;
+  background-color: #fff !important;
+  box-shadow: 0 1px 0 rgb(213, 43, 30) !important;
+  border: 1px solid #d6290f !important;
+  text-shadow: none !important;
 }
 
 .wp-core-ui .button.focus,
 .wp-core-ui .button:focus {
-  color: rgb(213, 43, 30);
-  border-color: rgb(213, 43, 30);
-  background: #fff;
-  box-shadow: 0 1px 0 rgb(213, 43, 30);
+  color: rgb(213, 43, 30) !important;
+  border-color: rgb(213, 43, 30) !important;
+  background-color: #fff !important;
+  box-shadow: 0 1px 0 rgb(213, 43, 30) !important;
+  text-shadow: none !important;
+  border: 1px solid #d6290f !important;
 }
 
 .wp-core-ui .button-primary:disabled,
@@ -492,25 +496,33 @@ textarea:focus {
   color: #fff !important;
 }
 
-.mainwp-upgrade-button {
-  background: #d6290f !important;
-  border-color: #d6290f !important;
+body .mainwp-upgrade-button {
+  background: #d52b1e !important;
+  border-color: #d52b1e !important;
+  box-shadow: 0 1px 0 #d52b1e !important;
 }
 
-.mainwp_boxout a:hover {
-  color: #d6290f;
+body .mainwp_boxout a:hover {
+  color: #d52b1e;
 }
 
-.mainwp-upgrade-button:hover {
+body .mainwp-upgrade-button:hover {
   background: #fff !important;
-  color: #d6290f !important;
+  color: #d52b1e !important;
+}
+
+.tablenav .tablenav-pages a:hover,
+.tablenav .tablenav-pages a:focus {
+
+  border-color: #d52b1e;
+  background: #d52b1e;
 }
 
 .js .postbox .handlediv:focus .toggle-indicator::before {
   box-shadow: 0 0 0 1px rgb(213, 43, 30), 0 0 2px 1px rgba(213, 43, 30, 0.8) !important;
 }
 
-.mainwp-notice-blue {
+body .mainwp-notice-blue {
   border-left: 4px solid rgb(213, 43, 30) !important;
 }
 
@@ -562,11 +574,11 @@ ul#gf_form_toolbar_links li a.gf_toolbar_active:hover, ul#gf_form_toolbar_links 
 }
 
 .mainwp-checkbox:before {
-  left: 4px;
+  left: 4px !important;
 }
 
 .mainwp-checkbox:after {
-  right: 4px;
+  right: 4px !important;
 }
 
 body.wp-admin .components-button.is-link {
