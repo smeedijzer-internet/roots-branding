@@ -394,6 +394,10 @@ a:hover {
   color: #d52b1e;
 }
 
+#form_settings h3 span i[class*=" fa-"], #form_settings h3 span i[class^="fa-"], .gform_tab_container h3 span i[class*=" fa-"], .gform_tab_container h3 span i[class^="fa-"] {
+  color: #d52b1e;
+}
+
 input[type=checkbox]:checked::before {
   color: rgb(213, 43, 30);
 }
