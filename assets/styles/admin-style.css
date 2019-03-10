@@ -589,7 +589,7 @@ ul#gf_form_toolbar_links li a.gf_toolbar_active:hover, ul#gf_form_toolbar_links 
 }
 
 #mainwp-tabs .nav-tab-active {
-  color: rgb(213, 43, 30);
+  color: rgb(213, 43, 30) !important;
   border-top: 1px solid rgb(213, 43, 30)!important;
 }
 
