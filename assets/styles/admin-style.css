@@ -646,6 +646,13 @@ body.wp-admin .components-button.is-primary:hover {
   color: #fff;
 }
 
+#wpadminbar .menupop .ab-sub-wrapper {
+  top: auto;
+  bottom: 32px;
+  background-color: rgba(213, 43, 30, 1);
+  color: white;
+}
+
 body.wp-admin .wp-core-ui .button.button-primary.button-hero {
   box-shadow: 0 2px 0 rgb(213, 43, 30);
 }
