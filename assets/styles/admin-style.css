@@ -657,3 +657,12 @@ body.wp-admin .wp-core-ui .button.button-primary.button-hero {
 .wp-core-ui .button.button-primary.button-hero {
     box-shadow: 0 2px 0 rgb(213, 43, 30);
 }
+
+#wp-admin-bar-root-default svg {
+  vertical-align: baseline;
+}
+
+#wpadminbar #wp-admin-bar-my-logo > .ab-item .ab-icon {
+  top: 2px !important;
+  float: none;
+}
