@@ -1,6 +1,6 @@
 <?php
 
-namespace Roots\Branding;
+namespace Smeedijzer\Branding;
 
 // Set up plugin class
 class Init

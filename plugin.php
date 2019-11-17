@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: Roots Branding
-Plugin URI: https://roots.io
+Plugin Name: Smeedijzer Internet Branding
+Plugin URI: https://www.smeedijzer.net
 Description: Branding for Roots WordPress sites.
 Version: 1.0
-Author: Michael W. Delaney
+Author: Smeedijzer Internet
 Author URI:
 License: MIT
 */
 
-namespace Roots\Branding;
+namespace Smeedijzer\Branding;
 
 /**
  * Set up autoloader
