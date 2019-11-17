@@ -1,6 +1,7 @@
 {
   "name": "smeedijzer-internet/smeedijzer-branding",
   "description": "Branding for Roots WordPress sites.",
+  "version": "1.0.0",
   "keywords": ["wordpress", "plugin", "branding"],
   "homepage": "https://github.com/smeedijzer-internet/smeedijzer-branding",
   "license": "MIT",
