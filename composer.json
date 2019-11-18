@@ -12,7 +12,7 @@
   ],
   "type": "wordpress-muplugin",
   "require": {
-    "php": ">=7.2.1"
+    "php": ">=7.1"
   },
   "autoload": {
     "psr-4": { "Smeedijzer\\Branding\\": "src/" }

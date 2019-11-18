@@ -34,7 +34,7 @@ class Init
         ?>
     <style type="text/css">
       body.login div#login h1 a {
-      background-image: url( <?=(ROOTS_BRANDING_PLUGIN_URL . 'assets/images/logo-icon.svg')?> );
+      background-image: url( <?=( wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ))[0] )?> );
       background-repeat: no-repeat;
       background-size: auto;
       width: 300px;
@@ -50,7 +50,7 @@ class Init
      */
     public function login_logo_url($url)
     {
-        return 'https://roots.io';
+        return home_url();
     }
 
 
@@ -58,7 +58,7 @@ class Init
     // Replace login logo title
     public function login_logo_headertext()
     {
-        return 'Powered by Roots';
+        return 'Ontwikkeld door Smeedijzer Internet';
     }
 
 
@@ -108,6 +108,8 @@ class Init
     */
     public function admin_footer($content)
     {
-        return 'Site powered by <a href="https://roots.io">Roots</a>';
+        return '';
+
+            'Site powered by <a href="https://roots.io">Roots</a>';
     }
 }
