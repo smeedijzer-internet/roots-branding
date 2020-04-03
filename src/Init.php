@@ -102,7 +102,7 @@ class Init
             }
 
             .components-button.edit-post-fullscreen-mode-close.has-icon::after {
-              content: url( <?php echo(ROOTS_BRANDING_PLUGIN_URL . 'assets/images/logo-icon-white.svg') ?> );
+              content: url( <?=ROOTS_BRANDING_PLUGIN_URL . 'assets/images/logo-icon-white.svg' ?> );
               width: 50px;
               height: 35px;
             }
