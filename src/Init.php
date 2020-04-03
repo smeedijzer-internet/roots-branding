@@ -7,13 +7,13 @@ class Init
 {
     public function __construct()
     {
-        add_action('login_enqueue_scripts', array($this, 'loginLogo'));
-        add_filter('admin_footer_text', array($this, 'adminFooter'), 11);
-        add_action('admin_bar_menu', array($this, 'removeWPLogo'), 999);
-        add_action('admin_bar_menu', array($this, 'createMenu'), 1);
-        add_action('wp_before_admin_bar_render', array($this, 'menuCustomLogo'));
-        add_filter('login_headerurl', array($this, 'loginLogoUrl'));
-        add_filter('login_headertext', array($this, 'loginLogoHeadertext'));
+        add_action('login_enqueue_scripts', [$this, 'loginLogo']);
+        add_filter('admin_footer_text', [$this, 'adminFooter'], 11);
+        add_action('admin_bar_menu', [$this, 'removeWPLogo'], 999);
+        add_action('admin_bar_menu', [$this, 'createMenu'], 1);
+        add_action('wp_before_admin_bar_render', [$this, 'menuCustomLogo']);
+        add_filter('login_headerurl', [$this, 'loginLogoUrl']);
+        add_filter('login_headertext', [$this, 'loginLogoHeadertext']);
     }
 
 
@@ -32,7 +32,7 @@ class Init
     public function loginLogo()
     {
         ?>
-          <style type="text/css">
+          <style>
             body.login div#login h1 a {
             background-image: url( <?=(ROOTS_BRANDING_PLUGIN_URL . 'assets/images/logo-icon.svg')?> );
             background-repeat: no-repeat;
@@ -72,14 +72,14 @@ class Init
           'title' =>
           '<span class="ab-icon">' . file_get_contents(ROOTS_BRANDING_PLUGIN_DIR . "assets/images/logo-icon.svg") . '</span>',
           'href' => '/'
-          ]);
+        ]);
         $wp_admin_bar->add_node([
           'parent' => $menu_id,
           'title' => __('Homepage'),
           'id' => 'my-logo-home',
           'href' => 'https://roots.io',
           'meta' => ['target' => '_blank']
-          ]);
+        ]);
     }
 
 
@@ -89,7 +89,7 @@ class Init
     public function menuCustomLogo()
     {
         ?>
-          <style type="text/css">
+          <style>
             #wpadminbar #wp-admin-bar-my-logo > .ab-item .ab-icon {
               height: 20px;
               width: 20px;
